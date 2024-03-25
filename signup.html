@@ -26,46 +26,86 @@
                             <p>Surname</p>
                             <input type="text" placeholder="Type Surname" id="surname" class="form-control">
                             <p>Mobile Number</p>
-                            <input type="text" placeholder="08012345678" class="form-control">
+                            <input type="text" placeholder="08012345678" id="phone" class="form-control">
                             <p>Date of Birth</p>
-                            <input type="date" id="date" class="form-control">
-                            <p>Physically Challenged</p>
-                            <input type="text" placeholder="None" class="form-control">
+                            <input type="date" id="date" class="form-control" required>
                             <p>Choose Password</p>
                             <input type="password" id="password" placeholder="Type Password" class="form-control">
                             <br>
                             <button class="btn mx-auto btn-secondary"
-                                style="background-color: #8C8CF6; color: white;">sign Up</button>
+                                style="background-color: #8C8CF6; color: white;" onclick="clickBtn()">sign Up</button>
                         </div>
                         <div class="col-6 fw-medium">
                             <p>Other Name</p>
-                            <input type="text" placeholder="Type Other Name" class="form-control">
+                            <input type="text" placeholder="Type Other Name" id="othername" class="form-control">
                             <p>Email Address</p>
                             <input type="email" id="email" placeholder="Type Email" class="form-control">
                             <p>Gender</p>
-                            <select name="" id="" class="form-control">
+                            <select name="" id="gender" class="form-control" required>
                                 <option value="">Select Gender</option>
-                                <option value="">Male</option>
-                                <option value="">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
                                 <option value="">Other</option>
                             </select>
                             <p>Marital Status</p>
-                            <select name="" id="" class="form-control">
+                            <select name="" id="status" class="form-control" required>
                                 <option value="">Select Status</option>
-                                <option value="">Single</option>
-                                <option value="">Married</option>
-                                <option value="">Widowed</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widowed">Widowed</option>
                             </select>
-                            <p>Other Disability</p>
-                            <input type="text" placeholder="None" class="form-control">
                             <p>Confirm Passsword</p>
-                            <input type="password" placeholder="Retype Password" class="form-control">
+                            <input type="password" placeholder="Confirm Password" id="confirmp" class="form-control">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        const input = []
+
+        function clickBtn(){
+
+            if (firstname.value =="" &&  surname.value=="" && phone.value=="" 
+            && password.value=="" && othername.value=="" && email.value ==""
+            ) {
+                alert("Make sure you fill everything")
+            }
+            if (password.value != confirmp.value) {
+                alert("error password")
+            }
+
+            // let firstname = document.getElementById("firstname").value
+            let User = {
+                 firstName : firstname.value,
+             surName : surname.value,
+             Phone : phone.value,
+             passWord : password.value,
+            Gender : gender.value,
+            Othername : othername.value,
+            Email : email.value,
+            Status : status.value,
+            Dates : date.value 
+            }
+            
+            console.log(User);
+
+            
+            firstname.value = ''
+            surname.value = ''
+            phone.value = ''
+            password.value = ''
+            gender.value = ''
+            othername.value = ''
+            email.value = ''
+            status.value = ''
+            date.value = ''
+            confirmp.value = ''
+
+
+        }
+    </script>
 </body>
 
 </html>
