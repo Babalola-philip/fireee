@@ -1,0 +1,77 @@
+body{
+    background-color: rgb(140, 140, 246);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+.navbar-nav{
+    margin-left: 350px;
+    justify-content: space-between;
+    gap: 40px;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: roboto;
+    
+}
+.navbar-brand{
+    margin-left: 50px;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: roboto;
+
+}
+.sign{
+    margin-right: 50px;
+    width: 8%;
+    height: 40px;
+    color: white;
+    background-color: rgb(140, 140, 246);
+    border-radius: 10px;
+    border: none;
+}
+.sign1{
+    margin-right: 50px;
+    width: 8%;
+    height: 40px;
+    color: white;
+    background-color: rgb(140, 140, 246);
+    border-radius: 10px;
+    border: none;
+}
+map{
+    position: absolute;
+    margin-right: 10px;
+}
+
+.main{
+     display: flex;
+    
+}
+
+.main h1{
+    position: relative;
+   margin-top: 200px;
+   margin-left: 100px;
+   color: white;
+   font-size: 50px;
+   font-family: arial;
+   font-weight: 600;
+     
+}
+.main p{
+    position: relative;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-family: roboto;
+     
+     
+}
+.main img{
+    position: relative;
+    margin-left: 450px;
+    margin-top: 90px;
+    width: 30%;
+    height: 400px;
+}
